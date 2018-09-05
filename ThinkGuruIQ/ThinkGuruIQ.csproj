@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MtApi, Version=1.0.40.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\MtApi\MtApi.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -53,6 +57,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Signal.xaml.cs">
+      <DependentUpon>Signal.xaml</DependentUpon>
+    </Compile>
+    <Page Include="chat.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="chat_doc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -61,10 +76,24 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="chat.xaml.cs">
+      <DependentUpon>chat.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="chat_doc.xaml.cs">
+      <DependentUpon>chat_doc.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Signal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Simple Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -91,6 +120,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons8_Settings_32px_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons8_Globe_Earth_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons8_GPS_Signal_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons8_Timesheet_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons8_Combo_Chart_32px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons8_Share_3_32px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons8_Add_User_Male_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons8_Customer_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons8_Login_Rounded_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons8_Sign_Out_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons8_Chat_32px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

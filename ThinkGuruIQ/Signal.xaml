@@ -1,0 +1,39 @@
+﻿<Window x:Name="signal" x:Class="ThinkGuruIQ.Signal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ThinkGuruIQ"
+        mc:Ignorable="d" Height="455.075" Width="415.977" Icon="icons8_GPS_Signal_32px.png" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+    <Grid>
+        <Label Content="Signal Name" HorizontalAlignment="Left" Margin="46,71,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="signal_name" HorizontalAlignment="Left" Height="23" Margin="138,75,0,0" TextWrapping="Wrap" Text="New Signal" VerticalAlignment="Top" Width="210"/>
+        <Label x:Name="Trade_Amount" Content="Trade Amount" HorizontalAlignment="Left" Margin="46,136,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="trade_amnt" HorizontalAlignment="Left" Height="23" Margin="138,140,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="210"/>
+        <Label Content="Indicator" HorizontalAlignment="Left" Margin="46,107,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="Indicators" HorizontalAlignment="Left" Margin="138,107,0,0" VerticalAlignment="Top" Width="210"/>
+        <Label x:Name="entry_type" Content="Entry Type" HorizontalAlignment="Left" Margin="46,168,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="entry" HorizontalAlignment="Left" Margin="138,168,0,0" VerticalAlignment="Top" Width="210">
+            <ComboBoxItem Content="Intrabar"/>
+            <ComboBoxItem Content="On new Bar"/>
+        </ComboBox>
+        <Label Content="Martingle" HorizontalAlignment="Left" Margin="46,197,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="martingle" HorizontalAlignment="Left" Margin="138,197,0,0" VerticalAlignment="Top" Width="210">
+            <ComboBoxItem Content="No Martingle"/>
+            <ComboBoxItem Content="Martingle: On Next Expiry"/>
+            <ComboBoxItem Content="Martingle : On Next Signal"/>
+            <ComboBoxItem Content="Reverse Martingle : On next  expiry"/>
+            <ComboBoxItem Content="Reverse Martingle : On next signal"/>
+        </ComboBox>
+        <Label Content="Expiry Time" HorizontalAlignment="Left" Margin="46,258,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="expiry_time" HorizontalAlignment="Left" Height="23" Margin="138,262,0,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="210"/>
+        <Label Content="Martingle Steps" HorizontalAlignment="Left" Margin="46,227,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Mar_steps" HorizontalAlignment="Left" Height="23" Margin="138,231,0,0" TextWrapping="Wrap" Text="2" VerticalAlignment="Top" Width="210"/>
+        <Label Content="Martingle Coefficient" HorizontalAlignment="Left" Margin="12,286,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="mar_coef" HorizontalAlignment="Left" Height="23" Margin="138,290,0,0" TextWrapping="Wrap" Text="0.2" VerticalAlignment="Top" Width="210"/>
+        <Button x:Name="Submit" Content="Start Trading" HorizontalAlignment="Left" Margin="55,355,0,0" VerticalAlignment="Top" Width="302" Height="30" Click="Submit_Click"/>
+        <Label Content="Trade Timing" HorizontalAlignment="Left" Margin="46,316,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="trade_time" HorizontalAlignment="Left" Height="23" Margin="138,320,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="210"/>
+
+    </Grid>
+</Window>
